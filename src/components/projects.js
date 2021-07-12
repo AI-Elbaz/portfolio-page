@@ -6,19 +6,19 @@ const Projects = () => {
     {
       title: 'Recipe Blog',
       tags: ['html', 'css', 'js'],
-      img: 'https://picsum.photos/id/690/320/275',
+      img: 'https://picsum.photos/id/695/320/275',
       description: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. '
     },
     {
       title: 'My Gallery',
       tags: ['html', 'css', 'responsive'],
-      img: 'https://picsum.photos/id/695/320/275',
+      img: 'https://picsum.photos/id/694/320/275',
       description: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. '
     },
     {
       title: 'Checkout',
       tags: ['html', 'css', 'responsive'],
-      img: 'https://picsum.photos/id/660/320/275',
+      img: 'https://picsum.photos/id/693/320/275',
       description: 'In this project, I work with HTML and CSS to create a responsive page . The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. '
     },
   ];
@@ -49,7 +49,7 @@ const Projects = () => {
 
 const Project = ({project}) => {
   return (
-    <div className="project">
+    <div className="card project">
       <img src={project.img} alt={project.title} />
       <div className="info">
         <div className="tags">

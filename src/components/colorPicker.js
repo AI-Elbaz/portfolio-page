@@ -15,7 +15,7 @@ const ColorPicker = () => {
     document.querySelector('html').style.setProperty(
       '--primary', localStorage.getItem('themeColor')
     );
-  }, [])
+  }, []);
 
   const handleClick = (c) => {
     localStorage.setItem('themeColor', c);

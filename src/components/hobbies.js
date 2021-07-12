@@ -1,6 +1,6 @@
 const Hobbies = () => {
   return (
-    <section className="hobbies">
+    <section className="card hobbies">
       <h2>Hobbies</h2>
       <div className="hobby">
         <img src="https://picsum.photos/id/680/370/140" />

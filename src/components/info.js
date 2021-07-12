@@ -4,9 +4,9 @@ import Avatar from './avatar.jpg';
 
 const Info = () => {
   return (
-    <section className="info-card">
+    <section className="card info">
       <img src={Avatar} alt="" />
-      <div className="info">
+      <div className="info-content">
         <h2 className="name">Billy Pearson</h2>
         <p className="job">Front-end developer</p>
         <div className="contact">

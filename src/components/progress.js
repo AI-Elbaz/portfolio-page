@@ -1,6 +1,6 @@
 const Progress = () => {
   return (
-    <section className="progress-card">
+    <section className="card progress">
       <h2>Front end</h2>
       <ProgressBar title="React" progress={0.65} />
       <ProgressBar title="Javascript" progress={0.85} />

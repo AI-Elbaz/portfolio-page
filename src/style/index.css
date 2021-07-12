@@ -71,21 +71,13 @@ img {
   background-color: var(--background);
 }
 
-section {
-  width: 100%;
-}
-
-.info-card {
+.card {
   padding: 23px;
   position: relative;
   border-radius: 12px;
   background-color: #fff;
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  width: fit-content;
 }
-.info-card::after {
+.card::after {
   content: "";
   z-index: -1;
   width: 80%;
@@ -95,33 +87,44 @@ section {
   transform: translateX(-50%);
   box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
 }
-.info-card img {
+
+section {
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  width: fit-content;
+}
+.info img {
   border-radius: 12px;
 }
 @media only screen and (min-width: 768px) {
-  .info-card img {
+  .info img {
     flex: 0 1 20%;
   }
 }
-.info-card .info {
+.info .info-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.info-card .name {
+.info .name {
   font-weight: 600;
   font-size: 1.5rem;
   color: var(--gray-2);
 }
-.info-card .job {
+.info .job {
   font-weight: 500;
   color: var(--gray-1);
   font-size: 1.125rem;
 }
-.info-card .contact {
+.info .contact {
   margin: 30px 0;
 }
-.info-card .contact > div {
+.info .contact > div {
   display: flex;
   gap: 20px;
   font-weight: 500;
@@ -129,37 +132,21 @@ section {
   font-size: 1.125rem;
   color: var(--gray-2);
 }
-.info-card .description {
+.info .description {
   font-size: 1.125rem;
   line-height: 1.45em;
   color: var(--gray-1);
   max-width: 30ch;
 }
 
-.progress-card {
-  padding: 23px;
-  position: relative;
-  border-radius: 12px;
-  background-color: #fff;
-}
-.progress-card::after {
-  content: "";
-  z-index: -1;
-  width: 80%;
-  height: 20px;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
-}
-.progress-card h2 {
+.progress h2 {
   font-weight: 700;
   font-size: 1.125rem;
   margin-bottom: 18px;
   color: var(--gray-2);
   text-transform: uppercase;
 }
-.progress-card .progress-bar {
+.progress .progress-bar {
   margin: 1rem 0;
 }
 
@@ -191,22 +178,6 @@ section {
   width: calc(100% * var(--progress));
 }
 
-.hobbies {
-  padding: 23px;
-  position: relative;
-  border-radius: 12px;
-  background-color: #fff;
-}
-.hobbies::after {
-  content: "";
-  z-index: -1;
-  width: 80%;
-  height: 20px;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
-}
 .hobbies h2 {
   font-weight: 500;
   font-size: 1.5rem;
@@ -247,24 +218,10 @@ section {
 }
 
 .project {
-  padding: 23px;
-  position: relative;
-  border-radius: 12px;
-  background-color: #fff;
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
   margin-bottom: var(--main-gap);
-}
-.project::after {
-  content: "";
-  z-index: -1;
-  width: 80%;
-  height: 20px;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
 }
 .project img {
   border-radius: 12px;
@@ -404,25 +361,12 @@ section {
 }
 
 .blog {
-  padding: 23px;
-  position: relative;
-  border-radius: 12px;
-  background-color: #fff;
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap-reverse;
   padding-right: 0;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
   margin-bottom: var(--main-gap);
-}
-.blog::after {
-  content: "";
-  z-index: -1;
-  width: 80%;
-  height: 20px;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
 }
 .blog img {
   border-radius: 12px 0 0 12px;
@@ -454,8 +398,16 @@ section {
 }
 
 @media only screen and (min-width: 768px) {
-  .project, .blog, .info-card {
+  .project, .blog, .info {
     flex-wrap: nowrap;
+  }
+
+  .project img {
+    width: 320px;
+  }
+
+  .blog img {
+    width: 320px;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -464,10 +416,10 @@ section {
   }
 
   .column:first-of-type {
-    flex: 0 1 45%;
+    flex: 0 1 600px;
   }
 
-  .info-card {
+  .info {
     width: fit-content;
     flex-wrap: wrap;
   }

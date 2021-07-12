@@ -12,7 +12,7 @@ const Blogs = () => {
       <h2>Blogs</h2>
 
       {blogs.map(b => 
-        <div className="blog">
+        <div className="card blog">
           <div className="info">
             <p className="title">{b.title}</p>
             <p className="description">{b.description}</p>
