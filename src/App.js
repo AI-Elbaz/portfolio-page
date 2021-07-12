@@ -1,5 +1,5 @@
 import './style/index.css';
-import { Hobbies, Info, Progress, Projects, ColorPicker, Blogs } from './components/index';
+import { Hobbies, Info, Progress, Projects, ColorPicker, Blogs, Footer } from './components/index';
 
 function App() {
   return (
@@ -9,15 +9,16 @@ function App() {
       </div>
       <main className="container">
         <div className="column">
-        <Info />
-        <Progress />
-        <Hobbies />
+          <Info />
+          <Progress />
+          <Hobbies />
         </div>
-      <div className="column">
-        <Projects />
-        <Blogs />
-      </div>
+        <div className="column">
+          <Projects />
+          <Blogs />
+        </div>
       </main>
+      <Footer />
     </div >
   );
 }

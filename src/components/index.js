@@ -4,6 +4,7 @@ import Hobbies from "./hobbies";
 import Projects from "./projects";
 import ColorPicker from "./colorPicker";
 import Blogs from "./blogs";
+import Footer from "./footer";
 
 export {
   Info,
@@ -11,5 +12,6 @@ export {
   Hobbies,
   Projects,
   ColorPicker,
-  Blogs
+  Blogs,
+  Footer
 };

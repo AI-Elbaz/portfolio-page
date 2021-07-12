@@ -25,8 +25,8 @@ const Projects = () => {
 
   const getTags = () => {
     let tags = [];
-    projects.map(p => {
-      p.tags.map(t => {
+    projects.forEach(p => {
+      p.tags.forEach(t => {
         if (!tags.includes(t)) tags.push(t);
       });
     });
@@ -71,16 +71,16 @@ const TagsChooser = ({ tags, onChange }) => {
 
   useEffect(() => {
     onChange(activeTag);
-  }, [activeTag]);
+  }, [activeTag, onChange]);
 
   const handleClick = (t) => {
-    setActiveTag(t == activeTag ? null : t)
+    setActiveTag(t === activeTag ? null : t)
   }
 
   return (
     <div className="tags-chooser">
       {tags.map(t =>
-        <span key={t} className={`tag ${activeTag == t ? 'active' : ''}`} onClick={() => handleClick(t)}>{t}</span>)
+        <span key={t} className={`tag ${activeTag === t ? 'active' : ''}`} onClick={() => handleClick(t)}>{t}</span>)
       }
     </div>
   );
